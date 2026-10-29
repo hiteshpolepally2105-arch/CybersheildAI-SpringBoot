@@ -2,8 +2,8 @@
 FROM maven:3.9-eclipse-temurin-17 AS build
 WORKDIR /app
 
-COPY spring-app/pom.xml ./pom.xml
-COPY spring-app/src ./src
+COPY pom.xml .
+COPY src ./src
 
 RUN mvn -B clean package -DskipTests
 
